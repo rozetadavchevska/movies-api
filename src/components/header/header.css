@@ -1,0 +1,21 @@
+.navbar{
+    display: flex;
+    justify-content: space-between !important;
+    background-color: black !important;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+}
+
+.logo-icon{
+    margin-right: 5px;
+}
+
+.logo{
+    color: white;
+}
+
+.nav-link{
+    color: white !important;
+    margin:5px;
+}
