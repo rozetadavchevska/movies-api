@@ -12,10 +12,19 @@
 }
 
 .logo{
-    color: white;
+    color: white !important;
 }
 
 .nav-link{
+    display: flex;
+    flex-direction: column;
     color: white !important;
     margin:5px;
+}
+
+.bar{
+    width: 100%;
+    padding: 1px;
+    height: 1px;
+    background-color: red !important;
 }

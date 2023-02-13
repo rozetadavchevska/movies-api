@@ -5,12 +5,21 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import Header from './components/header/Header';
+import Home from './pages/Home';
+import Movies from  './pages/Movies';
+import TvShows from './pages/TvShows';
+import { Routes, Route } from 'react-router';
 
 function App() {
 
   return (
     <>
-    <Header />  
+      <Header />
+      <Routes>
+        <Route path="/" element={ <Home /> }/>
+        <Route path="/movies" element={ <Movies /> }/>
+        <Route path="/tv" element={ <TvShows /> }/>
+      </Routes>
     </>
   );
 }

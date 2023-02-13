@@ -29,6 +29,14 @@ const TmdbApi = {
     search: (whichCategory, params)=>{
         const url = 'search/' + category[whichCategory];
         return AxiosClient.get(url, params);
+    },
+    getVideos: (whichCategory, id) =>{
+        const url = category[whichCategory] + '/' + id + '/videos';
+        return AxiosClient.get(url, {params: {}});
+    },
+    details: (whichCategory, id, param) =>{
+        const url = category[whichCategory] + '/' + id;
+        return AxiosClient.get(url, param);
     }
 }
 
