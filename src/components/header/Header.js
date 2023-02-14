@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'; 
 import {Navbar, Container, Nav} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import { faFilm, faSearch } from '@fortawesome/free-solid-svg-icons';
 import './header.css';
 
 
@@ -15,22 +15,26 @@ const Header = () => {
               <FontAwesomeIcon icon={faFilm} size="lg" color="white" className="logo-icon"/>
               Filmopedia
             </Navbar.Brand>
-              <Nav>
+              <Nav className="nav">
                 <Nav.Link className="home-link nav-link" as={Link} to='/'>
-                  Home
-                  <span className="bar"></span>
+                  <span className="bar">Home</span>
                 </Nav.Link>
                 <Nav.Link className="movies-link nav-link" as={Link} to='/movies'>
-                  Movies
-                  <span className="bar"></span>
+                  <span className="bar">Movies</span>
                 </Nav.Link>
                 <Nav.Link className="tv-link nav-link" as={Link} to='/tv'>
-                  TV Shows
-                  <span className="bar"></span>
+                  <span className="bar">TV Shows</span>
                 </Nav.Link>
+                <Container className="inputSearch">
+                  <input type="search" id="form1" className="form-control" placeholder="Search"/>
+                  <button type="button" className="btn btn-search">
+                    <FontAwesomeIcon icon={faSearch} size="lg" color="white" className="logo-icon"/>
+                  </button>
+                </Container>
               </Nav>
           </Container>
         </Navbar>
+        
     </>
   );
 }
