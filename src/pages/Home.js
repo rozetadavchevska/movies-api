@@ -1,12 +1,12 @@
 import React from 'react';
-import HeroSlide from '../components/heroSlide/HeroSlide';
+import Popular from '../components/popular/Popular';
 
 
 
 const Home = () => {
   return (
     <>
-      <HeroSlide />
+      <Popular />
     </>
     
   );

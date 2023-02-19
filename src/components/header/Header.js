@@ -5,8 +5,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faFilm, faSearch } from '@fortawesome/free-solid-svg-icons';
 import './header.css';
 
-
 const Header = () => {
+
   return (
     <>
       <Navbar bg="dark" variant="dark">
@@ -27,7 +27,7 @@ const Header = () => {
                 </Nav.Link>
                 <Container className="inputSearch">
                   <input type="search" id="form1" className="form-control" placeholder="Search"/>
-                  <button type="button" className="btn btn-search">
+                  <button type="submit" className="btn btn-search">
                     <FontAwesomeIcon icon={faSearch} size="lg" color="white" className="logo-icon"/>
                   </button>
                 </Container>

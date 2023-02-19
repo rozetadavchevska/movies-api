@@ -1,7 +1,8 @@
 .navbar{
     display: flex;
     justify-content: space-between !important;
-    background-color: #292929 !important;
+    /* background-color: #292929 !important; */
+    background: none;
     align-items: center;
     text-align: center;
     font-weight: 700;
