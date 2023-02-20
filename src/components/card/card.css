@@ -1,0 +1,12 @@
+.card{
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+}
+
+
+
+.btn-view{
+    background-color: red;
+    color: white;
+}

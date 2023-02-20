@@ -1,8 +1,9 @@
 import React, { useState} from 'react';
 import ApiConfig from '../../api/ApiConfig';
 import {Modal, Button} from 'react-bootstrap';
+import './card.css';
 
-const Card = ({title, poster, vote, releaseDate, overview}) => {
+const Card = ({title, poster_path, vote_average, release_date, overview}) => {
     const [show, setShow]=useState(false);
 
     const handleShow=()=>setShow(true);
@@ -10,20 +11,21 @@ const Card = ({title, poster, vote, releaseDate, overview}) => {
     const API_IMG = ApiConfig.w500Image;
   
     return (
-        <div className="card text-center bg-secondary mb-3">
+        <div className="card">
             <div className="card-body">
-                <img className="card-img-top" src={API_IMG+poster} alt='movie' />
-                <div className="card-body">
-                    <button type="button" className="btn btn-dark"  >View More</button>
-                    <Modal show={show} onClick={handleShow} onHide={handleClose}>
+              <img className="card-img-top" src={API_IMG+poster_path} alt='movie' />
+              <h6>{title}</h6>
+              <div className="card-body">
+                  <button type="button" className="btn btn-view" onClick={handleShow} >View More</button>
+                  <Modal show={show} onHide={handleClose}>
                       <Modal.Header closeButton>
                         <Modal.Title></Modal.Title>
                       </Modal.Header>
                       <Modal.Body>
-                      <img className="card-img-top" alt='movie' style={{width:'14rem'}}src={API_IMG+poster} />
+                      <img className="card-img-top" alt='movie' src={API_IMG+poster_path} />
                       <h3>{title}</h3>
-                      <h4>IMDb: {vote}</h4>
-                      <h5>Release Date: {releaseDate}</h5>
+                      <h4>IMDb: {vote_average}</h4>
+                      <h5>Release Date: {release_date}</h5>
                       <br></br>
                       <h6>Overview</h6>
                       <p>{overview}</p>

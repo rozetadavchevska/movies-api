@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import ApiConfig from '../../api/ApiConfig';
 import Card from '../card/Card';
 import './popular.css';
+// import Header from '../header/Header';
 
 const Popular = () => {
 
@@ -10,13 +11,13 @@ const Popular = () => {
     const API_MOVIE_POPULAR = ApiConfig.baseUrl + 'movie/popular?api_key=' + ApiConfig.apiKey;
 
     useEffect(()=>{
-        fetch(API_MOVIE_POPULAR)
-        .then((result) => result.json())
-        .then(data => {
-            console.log(data);
+        const fetchPopular = async ()=>{
+            const response = await fetch(API_MOVIE_POPULAR);
+            const data = await response.json();
             setMovieItems(data.results);
-        })
-    })
+        };
+        fetchPopular();
+    });
 
     // const movie = async(e)=>{
     //     e.preventDefault();
@@ -34,19 +35,16 @@ const Popular = () => {
     
 
     return (
-        <>
-        <div>
-            {movieItems.length > 0 ? (
-                <div>
+        <div className="popularSection">
+            <div className="popularContent">
+                <h2 className='popularText'>Popular now</h2>
+                <div className='grid'>
                     {movieItems.map((movieRequest)=>
                         <Card key={movieRequest.id} {...movieRequest} /> 
                     )}
                 </div>
-            ):(
-                <h2>No Movies Found</h2>
-            )}
+            </div>
         </div>
-        </>
     )
 }
 
