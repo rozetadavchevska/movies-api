@@ -53,7 +53,7 @@ const Popular = () => {
                 <h2 className='popularText'>Popular Tv Shows Now</h2>
                 <div className='grid'>
                     {popularTvShows.map((tvRequest)=>
-                        <CardTvShow key={tvRequest.id} movie={tvRequest} /> 
+                        <CardTvShow key={tvRequest.id} tv={tvRequest} /> 
                     )}
                 </div>
             </div>

@@ -4,9 +4,8 @@ import {Navbar, Container, Nav} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faFilm} from '@fortawesome/free-solid-svg-icons';
 import './header.css';
-import SearchMovie from '../searchMovie/SearchMovie';
+import Search from '../search/Search';
 // import { Route, Routes } from 'react-router';
-// import SearchResults from '../searchMovie/SearchMovieResults';
 // import Popular from '../popular/Popular';
 
 const Header = () => {
@@ -36,7 +35,7 @@ const Header = () => {
                       <FontAwesomeIcon icon={faSearch} size="lg" color="white" className="logo-icon"/>
                     </button>
                   </form> */}
-                  <SearchMovie />
+                  <Search />
                 </Container>
               </Nav>
           </Container>

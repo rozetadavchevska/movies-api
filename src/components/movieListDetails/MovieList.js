@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CardMovie from '../cardMovie/CardMovie';
 import ApiConfig from '../../api/ApiConfig';
+
 function MovieList() {
   const [movies, setMovies] = useState([]);
 

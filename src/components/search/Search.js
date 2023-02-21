@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 // import ApiConfig from '../../api/ApiConfig';
 
-function SearchMovie() {
+function Search() {
   const [query, setQuery] = useState('');
   const history = useNavigate();
 
@@ -12,7 +12,7 @@ function SearchMovie() {
     event.preventDefault();
     history(`/search/${query}`);
   };
-// ?query=${query}
+
   function handleChange(event) {
     setQuery(event.target.value);
   }
@@ -27,4 +27,4 @@ function SearchMovie() {
   );
 }
 
-export default SearchMovie;
+export default Search;

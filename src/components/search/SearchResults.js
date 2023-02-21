@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ApiConfig from '../../api/ApiConfig';
 
-function SearchMovieResults() {
+function SearchResults() {
   const { query } = useParams();
   const [results, setResults] = useState([]);
 
@@ -32,4 +32,4 @@ function SearchMovieResults() {
   );
 }
 
-export default SearchMovieResults;
+export default SearchResults;

@@ -6,7 +6,7 @@ function CardMovie({ movie }) {
   return (
     <div className="movie-card">
       <Link to={`/movies/${movie.id}`}>
-        <img src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`} alt={movie.title} />
+        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
       </Link>
       <div className="movie-info">
         <h3>{movie.title}</h3>
