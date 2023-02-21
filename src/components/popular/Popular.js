@@ -1,20 +1,25 @@
 import React, { useState, useEffect} from 'react';
 import ApiConfig from '../../api/ApiConfig';
-import Card from '../card/Card';
+import CardMovie from '../cardMovie/CardMovie';
+import CardTvShow from '../cardTvShow/CardTvShow';
 import './popular.css';
-// import Header from '../header/Header';
 
 const Popular = () => {
 
-    const [movieItems, setMovieItems] = useState([]);
+    const [popularMovies, setPopularMovies] = useState([]);
+    const [popularTvShows, setPopularTvShows] = useState([]);
 
     const API_MOVIE_POPULAR = ApiConfig.baseUrl + 'movie/popular?api_key=' + ApiConfig.apiKey;
+    const API_TV_POPULAR = ApiConfig.baseUrl + 'tv/popular?api_key=' + ApiConfig.apiKey;
 
     useEffect(()=>{
         const fetchPopular = async ()=>{
-            const response = await fetch(API_MOVIE_POPULAR);
-            const data = await response.json();
-            setMovieItems(data.results);
+            const responseMovies = await fetch(API_MOVIE_POPULAR);
+            const responseTv = await fetch(API_TV_POPULAR);
+            const dataMovies = await responseMovies.json();
+            const dataTv = await responseTv.json();
+            setPopularMovies(dataMovies.results);
+            setPopularTvShows(dataTv.results);
         };
         fetchPopular();
     });
@@ -37,10 +42,18 @@ const Popular = () => {
     return (
         <div className="popularSection">
             <div className="popularContent">
-                <h2 className='popularText'>Popular now</h2>
+                <h2 className='popularText'>Popular Movies Now</h2>
                 <div className='grid'>
-                    {movieItems.map((movieRequest)=>
-                        <Card key={movieRequest.id} {...movieRequest} /> 
+                    {popularMovies.map((movieRequest)=>
+                        <CardMovie key={movieRequest.id} movie={movieRequest} />
+                    )}
+                </div>
+            </div>
+            <div className="popularContent">
+                <h2 className='popularText'>Popular Tv Shows Now</h2>
+                <div className='grid'>
+                    {popularTvShows.map((tvRequest)=>
+                        <CardTvShow key={tvRequest.id} movie={tvRequest} /> 
                     )}
                 </div>
             </div>

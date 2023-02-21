@@ -6,9 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import Header from './components/header/Header';
 import Home from './pages/Home';
-import Movies from  './pages/Movies';
 import TvShows from './pages/TvShows';
 import { Routes, Route } from 'react-router';
+import MovieList from './components/movieListDetails/MovieList';
+import MovieDetails from './components/movieListDetails/MovieDetails';
+import SearchMovieResults from './components/searchMovie/SearchMovieResults';
 
 function App() {
 
@@ -17,8 +19,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={ <Home /> }/>
-        <Route path="/movies" element={ <Movies /> }/>
+        <Route path="/movies" element={ <MovieList />}/>
+        <Route path="/movies/:id" element={ <MovieDetails />}/>
         <Route path="/tv" element={ <TvShows /> }/>
+        <Route path="/search/:query" element={<SearchMovieResults />}/>
       </Routes>
     </>
   );

@@ -1,9 +1,9 @@
 import React, { useState} from 'react';
 import ApiConfig from '../../api/ApiConfig';
 import {Modal, Button} from 'react-bootstrap';
-import './card.css';
+import './cardTvShow.css';
 
-const Card = ({title, poster_path, vote_average, release_date, overview}) => {
+const CardTvShow = ({name, poster_path, vote_average, first_air_date, overview}) => {
     const [show, setShow]=useState(false);
 
     const handleShow=()=>setShow(true);
@@ -13,8 +13,8 @@ const Card = ({title, poster_path, vote_average, release_date, overview}) => {
     return (
         <div className="card">
             <div className="card-body">
-              <img className="card-img-top" src={API_IMG+poster_path} alt='movie' />
-              <h6>{title}</h6>
+              <img className="card-img-top" src={API_IMG+poster_path} alt='Movie poster'/>
+              <h6>{name}</h6>
               <div className="card-body">
                   <button type="button" className="btn btn-view" onClick={handleShow} >View More</button>
                   <Modal show={show} onHide={handleClose}>
@@ -23,9 +23,9 @@ const Card = ({title, poster_path, vote_average, release_date, overview}) => {
                       </Modal.Header>
                       <Modal.Body>
                       <img className="card-img-top" alt='movie' src={API_IMG+poster_path} />
-                      <h3>{title}</h3>
+                      <h3>{name}</h3>
                       <h4>IMDb: {vote_average}</h4>
-                      <h5>Release Date: {release_date}</h5>
+                      <h5>Release Date: {first_air_date}</h5>
                       <br></br>
                       <h6>Overview</h6>
                       <p>{overview}</p>
@@ -40,4 +40,4 @@ const Card = ({title, poster_path, vote_average, release_date, overview}) => {
     )
 }
 
-export default Card;
+export default CardTvShow;
