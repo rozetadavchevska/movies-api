@@ -5,8 +5,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faFilm} from '@fortawesome/free-solid-svg-icons';
 import './header.css';
 import Search from '../search/Search';
-// import { Route, Routes } from 'react-router';
-// import Popular from '../popular/Popular';
 
 const Header = () => {
 
@@ -29,12 +27,6 @@ const Header = () => {
                   <span className="bar">TV Shows</span>
                 </Nav.Link>
                 <Container className="search">
-                  {/* <form className="inputSearch">
-                    <input type="search" id="form" className="form-control" placeholder="Search"/>
-                    <button type="submit" className="btn btn-search">
-                      <FontAwesomeIcon icon={faSearch} size="lg" color="white" className="logo-icon"/>
-                    </button>
-                  </form> */}
                   <Search />
                 </Container>
               </Nav>

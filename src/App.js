@@ -1,6 +1,4 @@
 import {React} from 'react';
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
@@ -12,6 +10,7 @@ import MovieDetails from './components/movieListDetails/MovieDetails';
 import SearchResults from './components/search/SearchResults';
 import TvList from './components/tvListDetails/TvList';
 import TvDetails from './components/tvListDetails/TvDetails';
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -26,6 +25,7 @@ function App() {
         <Route path="/tv/:id" element={ <TvDetails /> }/>
         <Route path="/search/:query" element={<SearchResults />}/>
       </Routes>
+      <Footer />
     </>
   );
 }

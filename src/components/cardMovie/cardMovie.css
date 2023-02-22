@@ -1,0 +1,14 @@
+.card{
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+    width: 200px;
+    height: 450px;
+}
+
+
+
+.btn-view{
+    background-color: red;
+    color: white;
+}

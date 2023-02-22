@@ -1,0 +1,32 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-logo-icon{
+    margin-right: 5px;
+}
+
+.footer-logo{
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    padding: 0 !important;
+    color: white !important;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    padding: 0 !important;
+}
+
+.footer-nav-link{
+    margin: 10px;
+}
+
+.footer-hr, .text-center{
+    color:#a4a4a4;
+    font-size: 12px;
+}

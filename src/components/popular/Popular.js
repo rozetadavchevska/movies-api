@@ -24,20 +24,6 @@ const Popular = () => {
         fetchPopular();
     });
 
-    // const movie = async(e)=>{
-    //     e.preventDefault();
-    //     console.log('Searching');
-    //     try{
-    //         const search_url = ApiConfig.baseUrl + 'search/company?api_key' + ApiConfig.apiKey + '&page=1';
-    //         const result = await fetch(search_url);
-    //         const data =  await result.json();
-    //         console.log(data);
-    //         setMovieItems(data.results);
-    //     } catch {
-    //         console.log(e);
-    //     }
-    // }
-    
 
     return (
         <div className="popularSection">

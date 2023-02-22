@@ -1,10 +1,11 @@
 import React from 'react';
 import './cardMovie.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-function CardMovie({ movie }) {
+const CardMovie = ({ movie }) => {
   return (
-    <div className="movie-card">
+    <>
+    {/* <div className="movie-card">
       <Link to={`/movies/${movie.id}`}>
         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
       </Link>
@@ -12,7 +13,38 @@ function CardMovie({ movie }) {
         <h3>{movie.title}</h3>
         <span>{movie.release_date}</span>
       </div>
+    </div> */}
+
+    <div className="card">
+        <div className="card-body">
+          <img className="card-img-top" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>
+          <h6>{movie.title}</h6>
+          <div className="card-body">
+            {/* <Link to={`/movies/${movie.id}`}>
+              <button type="button" className="btn btn-view">View More</button>
+            </Link> */}
+              {/* <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title></Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                  <img className="card-img-top" alt='movie' src={API_IMG+poster_path} />
+                  <h3>{title}</h3>
+                  <h4>IMDb: {vote_average}</h4>
+                  <h5>Release Date: {release_date}</h5>
+                  <br></br>
+                  <h6>Overview</h6>
+                  <p>{overview}</p>
+                  </Modal.Body>
+                  <Modal.Footer>
+                      <Button variant="secondary" onClick={handleClose}>Close</Button>
+                  </Modal.Footer>
+              </Modal> */}
+          </div>
+        </div>
     </div>
+    </>
+    
   );
 }
 

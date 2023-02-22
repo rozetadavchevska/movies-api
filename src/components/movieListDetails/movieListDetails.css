@@ -1,0 +1,24 @@
+.movies-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-text{
+    margin-bottom:20px;
+}
+
+.movies-content{
+    width: 90%;
+    margin: 30px;
+}
+
+.movies-grid{
+    width: 100% !important;
+    display:grid !important;
+    justify-content: space-around !important;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto)) !important;
+    grid-gap: 50px !important;
+}
