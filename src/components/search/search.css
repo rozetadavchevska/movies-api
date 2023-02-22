@@ -17,21 +17,42 @@
 
 .search-results{
     display: flex;
-    
 }
 
 .movies-search-grid, .tv-search-grid{
     width: 100%;
-    display:grid;
+    display: grid !important;
     justify-content: space-around;
-    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
-    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 20px;
 }
 
-.movies-grid{
+.movie-grid{
+    width: 50%;
     display: block !important;
 }
 
-.tv-grid{
+.tvShow-grid{
+    width: 50%;
     display: block !important;
+}
+
+@media screen  and (min-width: 300px) and (max-width: 992px){
+    .search-results{
+        flex-direction: column !important;
+    }
+
+    .movies-search-grid, .tv-search-grid{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .movie-grid, .tvShow-grid{
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+    }
 }

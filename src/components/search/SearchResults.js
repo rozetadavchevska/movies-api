@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ApiConfig from '../../api/ApiConfig';
 import CardMovie from '../cardMovie/CardMovie';
-import './search.css';
 import CardTvShow from '../cardTvShow/CardTvShow';
+import './search.css';
 
 const SearchResults = () => {
   const { query } = useParams();
@@ -43,7 +43,7 @@ const SearchResults = () => {
         <div className='search-results'>
             
             {movies.length > 0 && (
-              <div className='movies-grid'>
+              <div className='movie-grid'>
                 <h3>Movies</h3>
                 <div className="movies-search-grid">
                   {movies.map((movie) => (
@@ -53,7 +53,7 @@ const SearchResults = () => {
               </div>
             )}
             {tvShows.length > 0 && (
-              <div className='tv-grid'>
+              <div className='tvShow-grid'>
                 <h3>Tv Shows</h3>
                 <div className="tv-search-grid">
                   {tvShows.map((tv) => (

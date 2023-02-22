@@ -19,9 +19,9 @@ const MovieList = () => {
 
   return (
     <div className="movies-list">
-      <div className='movies-content'>
+      <div className="movies-content">
         <h2 className='movies-text'>Trending Movies This Week</h2>
-        <div className="movies-grid">
+        <div className='movies-grid'>
           {movies.map(movie => (
             <CardMovie key={movie.id} movie={movie} />
           ))}

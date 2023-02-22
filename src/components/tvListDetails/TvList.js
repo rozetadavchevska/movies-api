@@ -19,9 +19,9 @@ const TvList = () => {
 
   return (
     <div className="tv-list">
-      <div className='tv-content'>
+      <div className="tv-content">
         <h2 className='tv-text'>Trending Tv Shows This Week</h2>
-        <div className="tv-grid">
+        <div className='tv-grid'>
           {tvShows.map(tv => (
             <CardTvShow key={tv.id} tv={tv} />
           ))}

@@ -17,8 +17,66 @@
 
 .tv-grid{
     width: 100%;
-    display:grid;
+    display: grid !important;
     justify-content: space-around;
+    align-items: center;
     grid-template-columns: repeat(auto-fit,minmax(200px,auto));
-    grid-gap: 50px;
+    grid-gap: 20px;
+}
+
+.tv-details{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tv-background{
+    filter: brightness(30%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: contain !important;
+}
+
+.tv-details-content{
+    width: 90% !important;
+    display: flex;
+    justify-content: center;
+}
+
+.tv-poster{
+    position: relative;
+    width: 400px;
+    z-index: 99;
+    margin: 50px;
+}
+
+.tv-description{
+    position: relative;
+    z-index: 99;
+    margin: 50px;
+    color: white;
+}
+
+.tv-description>h1, 
+.tv-description>h5, 
+.tv-description>p{
+    margin-bottom: 20px;
+}
+
+@media screen  and (min-width: 300px) and (max-width: 992px){
+    
+    .tv-details-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tv-poster{
+        margin: 10px;
+    }
+
 }

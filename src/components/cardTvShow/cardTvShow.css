@@ -3,12 +3,20 @@
     padding: 0 !important;
     text-align: center;
     width: 200px;
-    height: 450px;
+    height: 400px;
 }
-
-
 
 .btn-view{
     background-color: red;
+    color: white;
+    width: 80%;
+    position: absolute;
+    bottom: 10px !important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-view:hover{
+    background-color: #ff0000dc;
     color: white;
 }

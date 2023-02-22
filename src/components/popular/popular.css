@@ -20,5 +20,5 @@
     display:grid;
     justify-content: space-around;
     grid-template-columns: repeat(auto-fit,minmax(200px,auto));
-    grid-gap: 50px;
+    grid-gap: 20px;
 }

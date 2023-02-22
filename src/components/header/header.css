@@ -1,7 +1,6 @@
 .navbar{
     display: flex;
     justify-content: space-between !important;
-    /* background-color: #292929 !important; */
     background: none;
     align-items: center;
     text-align: center;
@@ -39,7 +38,6 @@
     right: 0;
     bottom: 0;
     width: 0;
-    /* padding: 1px; */
     height: 3px;
     background-color: red !important;
     transition: width 0.25s ease-out;
@@ -72,3 +70,22 @@
     display: flex;
 }
 
+#navbarScroll{
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+}
+
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+@media screen  and (min-width: 300px) and (max-width: 992px){
+    #navbarScroll{
+        justify-content: center !important;
+    }
+
+    .search{
+        width: 100%;
+    }
+}
